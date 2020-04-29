@@ -20,14 +20,28 @@
                             <a class="js-arrow" href="<?=base_url('admin/adminHome');?>">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                       
-                        <li class="has-sub">
-                            <a class="js-arrow" href="<?=base_url('admin/adminRegister');?>">
+                       <li class="has-sub">
+                            <a class="js-arrow" href="#">
                                 <i class="fas fa-copy"></i>Registration</a>
-                           
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li class="has-sub">
+                                        <a class="js-arrow" href="<?=base_url('admin/adminRegister');?>">
+                                        <i class="fa fa-plus-square"></i>User Form</a>   
+                                </li>
+                                <li>
+                                        <a class="js-arrow" href="<?=base_url('admin/adminHeirsregistration');?>">
+                                        <i class="fa fa-plus-square"></i>Heirs Form</a>   
+                                </li>
+                                <li>
+                                        <a class="js-arrow" href="<?=base_url('admin/adminloanregistration');?>">
+                                        <i class="fa fa-plus-square"></i>Loan Form</a>   
+                                </li>
+                            </ul>
                         </li>
+                        
                        
                     </ul>
+                     
                 </nav>
             </div>
         </aside>

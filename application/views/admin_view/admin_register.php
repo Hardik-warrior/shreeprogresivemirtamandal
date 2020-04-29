@@ -46,7 +46,7 @@
                                                     <label for="file-input" class=" form-control-label">Passport size photo</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="file" id="file-input"  name="psphoto"     value="<?=set_value('psphoto')?> class="form-control-file">
+                                                    <input type="file" id="file-input"  name="psphoto"     value="<?=set_value('psphoto')?>" class="form-control-file">
                                                     <?php echo form_error('psphoto','<span class="text-danger">', '</span>'); ?>
                                                 </div>
                                             </div>
@@ -98,7 +98,7 @@
                                                     <label for="textarea-input" class=" form-control-label">Current Address</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <textarea name="currentaddress" id="textarea-input"     value="<?=set_value('currentaddress')?>"rows="5" placeholder="Address..." class="form-control"></textarea>
+                                                    <textarea name="currentaddress" id="textarea-input"     value="<?=set_value('currentaddress')?>" rows="5" placeholder="Address..." class="form-control"></textarea>
                                                      <?php echo form_error('currentaddress','<span class="text-danger">', '</span>'); ?>
                                                 </div>
                                             </div>
@@ -120,7 +120,7 @@
 
                                                 <div class="col-12 col-md-9">
                                                 </br>
-                                                    <input type="text" id="text-input" name="village"       value="<?=set_value('village')?>"placeholder="Enter The Village Name" class="form-control">
+                                                    <input type="text" id="text-input" name="village"       value="<?=set_value('village')?>" placeholder="Enter The Village Name" class="form-control">
                                                      <?php echo form_error('village','<span class="text-danger">', '</span>'); ?>
                                                    <!--  <small class="form-text text-muted">please not write surname</small> -->
                                                 </div>
@@ -130,7 +130,7 @@
                                                     <label for="text-input" class=" form-control-label">Pincode</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="pinnumber"      value="<?=set_value('pinnumber')?>"placeholder="Enter The Pincode Number" class="form-control">
+                                                    <input type="text" id="text-input" name="pinnumber"      value="<?=set_value('pinnumber')?>" placeholder="Enter The Pincode Number" class="form-control">
                                                      <?php echo form_error('pinnumber','<span class="text-danger">', '</span>'); ?>
                                                    <!--  <small class="form-text text-muted">please not write surname</small> -->
                                                 </div>
@@ -140,7 +140,7 @@
                                                     <label for="text-input" class=" form-control-label">Taluka</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="talukaname"    value="<?=set_value('talukaname')?>"placeholder="Enter The Taluka Name" class="form-control">
+                                                    <input type="text" id="text-input" name="talukaname"    value="<?=set_value('talukaname')?>" placeholder="Enter The Taluka Name" class="form-control">
                                                      <?php echo form_error('talukaname','<span class="text-danger">', '</span>'); ?>
                                                     <!-- <small class="form-text text-muted ">Please enter first surname after write name</small> -->
                                                 </div>
@@ -150,7 +150,7 @@
                                                     <label for="text-input" class=" form-control-label">District</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="districtaname"   value="<?=set_value('districtaname')?>"placeholder="Enter The District Name" class="form-control">
+                                                    <input type="text" id="text-input" name="districtaname"   value="<?=set_value('districtaname')?>" placeholder="Enter The District Name" class="form-control">
                                                      <?php echo form_error('districtaname','<span class="text-danger">', '</span>'); ?>
                                                     <!-- <small class="form-text text-muted ">Please enter first surname after write name</small> -->
                                                 </div>
@@ -180,7 +180,7 @@
                                                     <label for="text-input" class=" form-control-label">Sub-Caste</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="subcaste"     value="<?=set_value('subcaste')?>"placeholder="Enter The Sub-Caste" class="form-control">
+                                                    <input type="text" id="text-input" name="subcaste"     value="<?=set_value('subcaste')?>" placeholder="Enter The Sub-Caste" class="form-control">
                                                      <?php echo form_error('subcaste','<span class="text-danger">', '</span>'); ?>
                                                     <!-- <small class="form-text text-muted ">Please enter first surname after write name</small> -->
                                                 </div>
@@ -190,7 +190,7 @@
                                                     <label for="text-input" class=" form-control-label">Business</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="business"     value="<?=set_value('business')?>"placeholder="Enter The Business" class="form-control">
+                                                    <input type="text" id="text-input" name="business"     value="<?=set_value('business')?>" placeholder="Enter The Business" class="form-control">
                                                      <?php echo form_error('business','<span class="text-danger">', '</span>'); ?>
                                                     <!-- <small class="form-text text-muted ">Please enter first surname after write name</small> -->
                                                 </div>
@@ -209,7 +209,7 @@
                                                     <label for="text-input" class=" form-control-label">Annual Income</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="annualincome"   value="<?=set_value('annualincome')?>"placeholder="Enter The Annual Income" class="form-control">
+                                                    <input type="text" id="text-input" name="annualincome"   value="<?=set_value('annualincome')?>" placeholder="Enter The Annual Income" class="form-control">
                                                      <?php echo form_error('annualincome','<span class="text-danger">', '</span>'); ?>
                                                     <!-- <small class="form-text text-muted ">Please enter first surname after write name</small> -->
                                                 </div>

@@ -31,7 +31,7 @@ class Admin extends CI_Controller {
 	}
 
 
-    // login area
+/// login area start
 
 	public function adminLogin()
 	{
@@ -69,7 +69,7 @@ class Admin extends CI_Controller {
 			redirect(base_url('admin/index'));
 	}
 
-	  // login area over
+/// login area over
 
 
 
@@ -79,11 +79,15 @@ class Admin extends CI_Controller {
 	}
 
 
+
+/// user form start
+
 	public function adminRegister()
 	{
 		$this->load->library('form_validation');
 		$this->load->view('admin_view/admin_register');
 	}
+
 
 	public function adminRegisterValidation()
 	{
@@ -91,91 +95,60 @@ class Admin extends CI_Controller {
 		// print_r('ha avigaya?');
 		
 
-			/// this is the form validation library of the codeigniter framework...
+		/// this is the form validation library of the codeigniter framework...
 		/// this library is use to validate the form
-		// $this->load->library('form_validation');
+		     $this->load->library('form_validation');
 
 		/// set_rules is the function of the form_validation library which is use to set the validation rule....
 
 		/// set_rules('field_name','statement to display','validation property');
 
-		//$this->form_validation->set_rules('psphoto', 'psphoto', 'required');
+		$this->form_validation->set_rules('psphoto', 'psphoto', 'required');
 
-		// $this->form_validation->set_rules('membername', 'membername', 'required');
+		$this->form_validation->set_rules('membername', 'membername', 'required');
 
-		// $this->form_validation->set_rules('fathername', 'fathername', 'required');
+		$this->form_validation->set_rules('fathername', 'fathername', 'required');
 
-		// $this->form_validation->set_rules('currentaddress', 'currentaddress', 'required');
+		$this->form_validation->set_rules('currentaddress', 'currentaddress', 'required');
 
-		// $this->form_validation->set_rules('mobilenumber', 'mobilenumber', 'required|exact_length[10]|numeric');
+		$this->form_validation->set_rules('mobilenumber', 'mobilenumber', 'required|exact_length[10]|numeric');
 
-		// $this->form_validation->set_rules('village', 'village', 'required');
+		$this->form_validation->set_rules('village', 'village', 'required');
 
-		// $this->form_validation->set_rules('pinnumber', 'pinnumber', 'required|exact_length[6]|numeric');
+		$this->form_validation->set_rules('pinnumber', 'pinnumber', 'required|exact_length[6]|numeric');
 
-		// $this->form_validation->set_rules('talukaname', 'talukaname', 'required');
+		$this->form_validation->set_rules('talukaname', 'talukaname', 'required');
 
-		// $this->form_validation->set_rules('districtaname', 'districtaname', 'required');
+		$this->form_validation->set_rules('districtaname', 'districtaname', 'required');
 
-		// $this->form_validation->set_rules('age', 'age', 'required');
+		$this->form_validation->set_rules('age', 'age', 'required');
 
-		// $this->form_validation->set_rules('caste', 'caste', 'required');
+		$this->form_validation->set_rules('caste', 'caste', 'required');
 
-		// $this->form_validation->set_rules('subcaste', 'subcaste', 'required');
+		$this->form_validation->set_rules('subcaste', 'subcaste', 'required');
 
-		// $this->form_validation->set_rules('business', 'business', 'required');
+		$this->form_validation->set_rules('business', 'business', 'required');
 
-		// $this->form_validation->set_rules('businessaddress', 'businessaddress', 'required');
+		$this->form_validation->set_rules('businessaddress', 'businessaddress', 'required');
 
-		// $this->form_validation->set_rules('annualincome', 'annualincome', 'required');
+		$this->form_validation->set_rules('annualincome', 'annualincome', 'required');
 		
-		// $this->form_validation->set_rules('house', 'house', 'required');
+		$this->form_validation->set_rules('house', 'house', 'required');
 
-	//$this->form_validation->set_rules('no', 'no', 'required');
+		$this->form_validation->set_rules('ACphoto', 'ACphoto', 'required');
 
-		//$this->form_validation->set_rules('ACphoto', 'ACphoto', 'required');
+	     //$this->form_validation->set_rules('no', 'no', 'required');
+
 
 
 		/// run() is the function of the codegnitor's form_validation library to run the validation...
 		/// if the validation works then the run function return the true.(all the conditions of the validation are true)
 		/// if there are mistakes in the validation then it returns the false. (any of the condition is not valid)
-	// if ($this->form_validation->run()) 
-	// {
 
-			/// input->post() : is the method use to take the data from the form passed data using post method...
-			
-			// print_r($_FILES);
+		if ($this->form_validation->run()) 
+		{
 
-				// foreach ($_FILES as $file ) 
-				// {
-				// 	if($file = "psphoto"){
-
-				// 		$config['upload_path'] = 'image/user_image/user_passportphoto/';
-				//    	    $config['allowed_types'] = 'jpg|jpeg|png|';
-
-				// 	}elseif ($file = "ACphoto"){
-
-				// 		$config['upload_path'] = 'image/user_image/user_adharcard/';
-				// 		$config['allowed_types'] = 'jpg|jpeg|png|';
-
-				// 	}else{
-
-				// 		print_r('phota sarkha nakho ne');
-				// 	}
-
-				// 	 $this->load->library('upload',$config);
-					 	
-				// 	$this->upload->do_upload('psphoto');
-				// 	$this->upload->do_upload('ACphoto');
-					
-				// 		 $imageData = $this->upload->data();
-    //   					 $acimageData = $this->upload->data();
-						 
-				// 		 $insert['psphoto'] = $imageData['file_name'];
-
-				// 		 $insert['ACphoto'] = $acimageData['file_name'];	
-						  	
-				// }
+				/// input->post() : is the method use to take the data from the form passed data using post method...
 		        $userDetails = $this->input->post();
 
 		        $state = 0;
@@ -306,110 +279,7 @@ class Admin extends CI_Controller {
 					$state++;
 
 		        }
-
-					// if($_FILES['psphoto']){
-
-					// 	$config['upload_path'] = 'image/user_image/user_passportphoto/';
-				 //    	$config['allowed_types'] = 'jpg|jpeg|png|';
-
-				 //    	 $this->load->library('upload',$config);
-
-				 //    	 if($this->upload->do_upload('psphoto')){
-
-				 //    	 	 $imageData = $this->upload->data();
-
-			  //                $insert['psphoto'] = $imageData['file_name'];
-
-
-				 //    	 }else{
-
-				 //    	 		$error = array('error' => $this->upload->display_errors());
-					// 			// $this->load->view('admin_view/admin_register',$error);
-
-				 //    	 }
-
-
-					// }else{
-
-					// 	print_r('Try agein');
-
-					// }
-
-					// if ($_FILES['ACphoto']) {
-
-					// 	$config['upload_path'] = 'image/user_image/user_adharcard/';
-				 // 		$config['allowed_types'] = 'jpg|jpeg|png|';
-
-				 // 		$this->load->library('upload',$config);
-
-				 // 		if ( $this->upload->do_upload('ACphoto')) {
-
-				 // 			 $acimageData = $this->upload->data();
-
-					// 		 $insert['ACphoto'] = $acimageData['file_name'];
-				 			
-				 // 		} else {
-
-				 // 			    $error = array('error' => $this->upload->display_errors());
-					// 			// $this->load->view('admin_view/admin_register',$error);
-				 			
-				 // 		}
-				 		
-						
-					// }else{
-					// 	print_r('Try agein');
-					// }
-
-				
-				
-
-			// foreach ($_FILES as $file ) {
-			// 	if($file = "psphoto"){
-
-			// 			$config['upload_path'] = 'image/user_image/user_passportphoto/';
-			//             $config['allowed_types'] = 'jpg|jpeg|png|';
-
-			//             $this->load->library('upload',$config);
-					
-			// 			$this->upload->do_upload('psphoto');
-
-			// 			 $imageData = $this->upload->data();
-						 
-
-			// 				$insert['psphoto'] = $imageData['file_name'];
-			// 				//$this->db->insert('userdetails', $insert);
-						
-
-			// 		if($file = "ACphoto")
-			// 		{
-
-			// 			$config2['upload_path'] = 'image/user_image/user_adharcard/';
-			// 	    	$config2['allowed_types'] = 'jpg|jpeg|png|';
-
-			// 	    	$this->load->library('upload',$config2);
-					
-			// 		    $this->upload->do_upload('ACphoto');
-
-   //    					 $acimageData = $this->upload->data();
-
-						
-			// 			$insert['ACphoto'] = $acimageData['file_name'];
-			// 			//$this->db->insert('userdetails', $insert);
-			// 		}
-			// 		else
-			// 		{
-
-			// 			print_r('phota sarkha nakho ne');
-			// 		}	
-			// 	}
-			// 	else
-			// 	{
-			// 		Print_r('phota sarkha nakho ne');
-			// 	}		
-
-			// }
-
-			//$this->MUser->insertUserDetails($userDetails);
+		        	//$this->MUser->insertUserDetails($userDetails);
 		
 		        $insert['psphoto'] = $_FILES['psphoto']['name'];
 		        $insert['ACphoto'] = $_FILES['ACphoto']['name'];
@@ -428,12 +298,48 @@ class Admin extends CI_Controller {
 				$insert['businessaddress'] = $userDetails['businessaddress'];
 				$insert['annualincome'] = $userDetails['annualincome'];
 				$insert['house'] = $userDetails['house'];
-			
+					//print_r($insert);
 				$this->db->insert('userdetails', $insert);
-		//}
-				redirect(base_url('admin/adminRegister'),'refresh');
-	
+				
+				redirect(base_url('admin/adminHome'));
+
+
+		}else{
+
+				$this->load->view('admin_view/admin_register');
+		}
+		//print_r('not proper data');
+		//$this->load->view('admin_view/admin_register');
 	}
+
+/// user form over
+
+/// heirs form start
+
+	public function adminHeirsregistration()
+	{
+		$this->load->library('form_validation');
+		$this->load->view('admin_view/admin_heistregistration');
+	}
+		
+/// heirs form over
+
+/// loan form start
+
+	public function adminloanregistration()
+	{
+		$this->load->library('form_validation');
+		$this->load->view('admin_view/admin_loanregistration');
+	}
+		
+/// loan form over
+
+			
+
+
+			
+
+
 
     
 
